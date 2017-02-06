@@ -7,7 +7,7 @@
 <body>
 
 <div class="table">
-	<table class="overall">
+	<table class="overall table table-responsive">
 		<thead>
 			<tr class="head asc">
 				<th id="R">R</th>
