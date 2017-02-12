@@ -1,0 +1,204 @@
+body {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin-top: 0px;
+}
+
+.header a {
+	color: #5e5e5e;
+	text-decoration: none;
+}
+
+.header {
+	border: 1px solid #e7e7e7;
+	height: 50px;
+	margin: 0px 10px 0px 10px;
+	background-color: #fff;
+}
+
+.container {
+	margin:40px 10px 40px 10px;
+	font-weight: 35f0;
+}
+
+h3 {
+	font-size: 24px;
+	margin-bottom: -5px;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.index {
+	float: left;
+	font-size: 20px;
+	margin: 15px;
+}
+
+.help {
+	float: left;
+	margin: 16.5px;
+}
+
+.login {
+	float: right;
+	margin: 16.5px 30px 16.5px 30px;
+}
+
+table {
+	clear: both;
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 14px;
+	margin: 20px 10px 0px 10px;
+}
+
+.table {
+	padding-right: 15px;
+}
+
+.flag {
+	box-sizing: content-box;
+	margin-bottom: 0px;
+	width: 25px;
+	float: left;
+	margin-top: 2px;
+}
+
+.overall tr:hover {
+	background-color: #e7e7e7;
+}
+
+th {
+	text-align: left;
+	padding: 6px;
+	padding-top: 15px;
+}
+
+tr {
+	border-bottom: 1px solid grey;
+}
+
+tr.last {
+	border-bottom: 0px solid white;
+}
+
+td {
+	padding: 6px;
+}
+
+td .name {
+	text-decoration: none;
+	color: #337ab7;
+}
+
+td .name:hover {
+	text-decoration: underline;
+}
+
+.head {
+	border-bottom: 2px solid #e7e7e7;
+}
+
+/*.gold {
+	background-color: gold;
+}
+
+.silver {
+	background-color: silver;
+}
+
+.bronze {
+	background-color: rgb(203, 126, 50);
+}*/
+
+.name a {
+	text-decoration: none;
+	color: #23527c;
+}
+
+.name a:hover {
+	text-decoration: underline;
+}
+
+/*.normal {
+	background-color: pink;
+}*/
+
+td.highest {
+	background-color: orange;
+}
+
+footer {
+	text-align: center;
+	margin-top: 10px;
+}
+
+p, li {
+	line-height: 20px;
+}
+
+h4.Zhang {
+	font-style: normal;
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 0px;
+}
+
+h4 b {
+	font-weight: 700;
+}
+
+p.Zhang {
+	margin: 10px 0px 10px 0px;
+	font-size: 14px;
+}
+
+.information {
+	float: left;
+	margin-left: 10px;
+}
+
+.img {
+	margin: 20px 10px 0px 0px;
+	float: right;
+}
+
+.img img {
+	width: 100px;
+	margin-left: 20px;
+}
+
+div.score {
+	clear: both;
+	margin-right: 15px;
+}
+
+p.score {
+	margin: 0px 10px 0px 15px;
+}
+
+p.detail {
+	margin-top: 20px;
+}
+
+table.container {
+	margin: 0px;
+}
+
+table.detailScore {
+	margin-right: 15px;
+	width: 100%;
+}
+
+tr.detailedScore {
+	border-bottom: 1px solid grey;
+	line-height: 130%;
+}
+
+tr.detailedScore:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+td.x {
+	background-color: pink;
+}
+
