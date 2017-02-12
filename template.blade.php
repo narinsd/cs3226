@@ -32,6 +32,9 @@
       <ul class="nav navbar-nav">
         <li><a href="help">Help</a></li>
       </ul>
+      <ul class="nav navbar-nav">
+        <li><a href="create">Create New Student Mode</a></li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a >Admin Login</a></li>
         <li class="dropdown">

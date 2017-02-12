@@ -151,10 +151,31 @@
 <canvas id="radarChart" width="400px" height="150px"></canvas>
 <p id="test"></p>
 
-<script>$(document).ready(function () {
+<form action='../edit'>
+<button type="submit" class="btn btn-primary" href='edit'>Edit</button>
+</form>
+
+<button type="submit" class="btn btn-primary" onclick="doFunction();">Delete</button>
+
+</form>
+
+<script>
+$(document).ready(function () {
 	var array = <?php echo json_encode($array); ?>;
 	drawRadar( array  );
-})</script>
+})
+
+function doFunction(){
+	var r = window.confirm("Are you sure you want to delete student?");
+	if (r == true) {
+    window.location.href = "../../edit";
+} else {
+    
+}
+}
+
+
+</script>
 
 
 
