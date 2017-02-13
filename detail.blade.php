@@ -29,19 +29,19 @@
 	<table class="detailedScore">
 		<tr class="detailedScore">
 			<th>Component</th>
-			<th>Sum</th>
+			<th>ID</th>
 			<th>01</th>
-			<th>02</th>
-			<th>03</th>
-			<th>04</th>
-			<th>05</th>
-			<th>06</th>
-			<th>07</th>
-			<th>08</th>
-			<th>09</th>
-			<th>10</th>
+			<th>CheckID</th>
+			<th>MC</th>
+			<th>TC</th>
+			<th>SPE</th>
+			<th>HW</th>
+			<th>Bs</th>
+			<th>Ks</th>
+			<th>Ac</th>
+			<th>DIL</th>
+			<th>Sum</th>
 			<th>11</th>
-			<th>12</th>
 		</tr>
 		<tr class="detailedScore">
 			<td>Mini Contests</td>

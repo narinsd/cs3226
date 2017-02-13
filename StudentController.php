@@ -100,8 +100,58 @@ public function editcheck(Request $request) {
     }
   	return view('index'); } 
 
+  // $names = array();
+  // for($i = 0; $i < 50; $i++) {
+  //   $names[$i] = $faker->unique()->firstName($gender = null|'male'|'female');
+  // }
+
+
+  // $id = array();
+  // for($i = 0; $i < 50;$i++) {
+  //   $id[$i] = $faker->unique()->numberBetween($min = 0, $max = 49);
+  // }
   public function detail($id) { 
-  	 $foo = array($id,$id*2,$id*3,$id*4,$id*5,$id*6,$id*7,$id*8,$id*9,$id,$id,$id);
+    $mcs = array();
+    for($i = 0; $i < 52; $i++) {
+      $mcs[$i] = $faker->numberBetween($min = 0, $max = 4);
+    }
+
+    $tcs = array();
+    for($i = 0; $i < 52; $i++) {
+      $tcs[$i] = $faker->numberBetween($min = 0, $max = 4);
+    }
+
+    $hws = array();
+    for($i = 0; $i < 52; $i++) {
+      $hws[$i] = $faker->numberBetween($min = 0, $max = 4);
+    }
+
+    $bss = array();
+    for($i = 0; $i < 52; $i++) {
+      $bss[$i] = $faker->numberBetween($min = 0, $max = 4);
+    }
+
+    $kss = array();
+    for($i = 0; $i < 52; $i++) {
+      $kss[$i] = $faker->numberBetween($min = 0, $max = 4);
+    }
+
+    $acs = array();
+    for($i = 0; $i < 52; $i++) {
+      $acs[$i] = $faker->numberBetween($min = 0, $max = 4);
+    }
+
+    $dils = array();
+    for($i = 0; $i < 52; $i++) {
+      $dils[$id] = $hws[$id] + $bss[$id] + $kss[$id] + $acs[$id];
+    }
+
+    $sums = array();
+    for($i = 0;$i < 52; $i++) {
+      $sums[$id] = $mcs[$id] + $tcs[$id] + $dils[$id];
+    }
+
+  	$foo = array($id,$mcs[$id],$tcs[$id],($mcs[$id]+$tcs[$id]),$hws[$id],$bss[$id],$kss[$id],$acs[$id],$dils[$id],$sums[$id],$id,$id);
   	$boo = array($id,$id,$id,$id,$id,$id,$id,$id,$id,$id,$id);
   	return view('detail')->with('array',$array=array( $id, $foo,$boo)); }
 
