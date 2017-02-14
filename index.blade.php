@@ -29,7 +29,7 @@
 			<tr>
 				<td>1</td>
 				<td><img class="flag" src="img/China.png">&nbsp;CHN</td>
-				<td class="name"><a href="detail/1" target="_blank"><img class="flag" src="img/kattis.png">&nbsp;Zhang Wenxuan</a></td>
+				<td class="name"><a href="/detail/1" target="_blank"><img class="flag" src="img/kattis.png">&nbsp;Zhang Wenxuan</a></td>
 				<td class="hidden-xs hidden-sm">0</td>
 				<td class="hidden-xs hidden-sm ">0</td>
 				<td >0</td>

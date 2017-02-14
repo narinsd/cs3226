@@ -42,15 +42,15 @@
   {!! Form::label('minicontest', 'Mini Contest Scores:', ['class' => 'control-label']) !!}
   <p id= "minicontest"></p>
   <div class "col-xs-2 form-group row">
-    {!! Form::number('m1', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('m2', '0', ['class' => 'form-control score ','step' => '0.5']) !!}
-    {!! Form::number('m3', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('m4', '0', ['class' => 'form-control score score','step' => '0.5']) !!}
-    {!! Form::number('m5', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('m6', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('m7', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('m8', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('m9', '0', ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('m1',  floatval($array[1][0]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('m2', floatval($array[1][1]), ['class' => 'form-control score ','step' => '0.5']) !!}
+    {!! Form::number('m3', floatval($array[1][2]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('m4', floatval($array[1][3]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('m5', floatval($array[1][4]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('m6', floatval($array[1][5]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('m7', floatval($array[1][6]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('m8', floatval($array[1][7]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('m9', floatval($array[1][8]), ['class' => 'form-control score','step' => '0.5']) !!}
   </div>
 </div>
 
@@ -58,15 +58,15 @@
   {!! Form::label('teamcontest', 'Team Contest Scores:', ['class' => 'control-label']) !!}
   <p id= "teamcontest"></p>
   <div class "col-xs-2 form-group row">
-    {!! Form::number('teamcontest1', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('teamcontest2', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('teamcontest3', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('teamcontest4', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('teamcontest5', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('teamcontest6', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('teamcontest7', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('teamcontest8', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('teamcontest9', '0', ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('teamcontest1', floatval($array[2][0]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('teamcontest2', floatval($array[2][1]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('teamcontest3', floatval($array[2][2]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('teamcontest4', floatval($array[2][3]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('teamcontest5', floatval($array[2][4]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('teamcontest6', floatval($array[2][5]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('teamcontest7', floatval($array[2][6]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('teamcontest8', floatval($array[2][7]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('teamcontest9', floatval($array[2][8]), ['class' => 'form-control score','step' => '0.5']) !!}
   </div>
 </div>
 
@@ -74,15 +74,15 @@
   {!! Form::label('homework', 'Homework Scores:', ['class' => 'control-label']) !!}
   <p id= "homework"></p>
   <div class "col-xs-2 form-group row">
-    {!! Form::number('homework1', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('homework2', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('homework3', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('homework4', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('homework5', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('homework6', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('homework7', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('homework8', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('homework9', '0', ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('homework1', floatval($array[4][0]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('homework2', floatval($array[4][1]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('homework3', floatval($array[4][2]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('homework4', floatval($array[4][3]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('homework5', floatval($array[4][4]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('homework6', floatval($array[4][5]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('homework7', floatval($array[4][6]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('homework8', floatval($array[4][7]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('homework9', floatval($array[4][8]), ['class' => 'form-control score','step' => '0.5']) !!}
   </div>
 </div>
 
@@ -90,30 +90,30 @@
   {!! Form::label('problemb', 'Problem B Scores:', ['class' => 'control-label']) !!}
   <p id= "problemb"></p>
   <div class "col-xs-2 form-group row">
-    {!! Form::number('problemb1', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('problemb2', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('problemb3', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('problemb4', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('problemb5', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('problemb6', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('problemb7', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('problemb8', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('problemb9', '0', ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('problemb1', floatval($array[5][0]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('problemb2', floatval($array[5][1]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('problemb3', floatval($array[5][2]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('problemb4',floatval($array[5][3]) , ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('problemb5',floatval($array[5][4]) , ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('problemb6', floatval($array[5][5]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('problemb7', floatval($array[5][6]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('problemb8', floatval($array[5][7]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('problemb9', floatval($array[5][8]), ['class' => 'form-control score','step' => '0.5']) !!}
   </div>
 </div>
 <div class="form-group"> {{-- Group related form components together --}}
   {!! Form::label('kattisset', 'Kattis Set Scores:', ['class' => 'control-label']) !!}
   <p id= "kattisset"></p>
   <div class "col-xs-2 form-group row">
-    {!! Form::number('kattisset1', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('kattisset2', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('kattisset3', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('kattisset4', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('kattisset5', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('kattisset6', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('kattisset7', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('kattisset8', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('kattisset9', '0', ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('kattisset1', floatval($array[6][0]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('kattisset2', floatval($array[6][1]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('kattisset3',floatval($array[6][2]) , ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('kattisset4',floatval($array[6][3]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('kattisset5', floatval($array[6][4]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('kattisset6', floatval($array[6][5]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('kattisset7', floatval($array[6][6]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('kattisset8', floatval($array[6][7]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('kattisset9', floatval($array[6][8]), ['class' => 'form-control score','step' => '0.5']) !!}
   </div>
 </div>
 
@@ -121,15 +121,15 @@
   {!! Form::label('achievement', 'Achievement Scores:', ['class' => 'control-label']) !!}
   <p id= "achievement"></p>
   <div class "col-xs-2 form-group row">
-    {!! Form::number('achievement1', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('achievement2', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('achievement3', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('achievement4', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('achievement5', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('achievement6', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('achievement7', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('achievement8', '0', ['class' => 'form-control score','step' => '0.5']) !!}
-    {!! Form::number('achievement9', '0', ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('achievement1', floatval($array[7][0]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('achievement2', floatval($array[7][1]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('achievement3', floatval($array[7][2]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('achievement4', floatval($array[7][3]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('achievement5', floatval($array[7][4]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('achievement6', floatval($array[7][5]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('achievement7', floatval($array[7][6]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('achievement8', floatval($array[7][7]), ['class' => 'form-control score','step' => '0.5']) !!}
+    {!! Form::number('achievement9', floatval($array[7][8]), ['class' => 'form-control score','step' => '0.5']) !!}
   </div>
 </div>
 <div></div>

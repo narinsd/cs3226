@@ -18,6 +18,6 @@ Route::get('about','StudentController@about');
 Route::get('index','StudentController@index');
 Route::get('create','StudentController@create');
 Route::post('create', 'StudentController@check');
-Route::get('edit','StudentController@edit');
+Route::get('edit/{id}','StudentController@edit');
 Route::post('edit', 'StudentController@editcheck');
 

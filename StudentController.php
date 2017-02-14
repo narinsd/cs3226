@@ -2,15 +2,94 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Faker\Factory as Faker;
+
 
 class StudentController extends Controller {
-  public function index() { return view('index'); } // show index view
+  
+  public $mcs = array();
+   public $tcs = array();
+   public $hws = array();
+  public  $bss = array();
+   public $kss = array();
+   public $acs = array();
+   public $dils = array();
+    public $sums = array();
+
+
+  public function index() { 
+    session_start();
+
+    global $dils,$bss, $kss, $acs, $hws, $mcs, $tcs, $sums;
+
+ $faker = Faker::create();
+ if(empty($_SESSION["data"])){
+  for($j = 0; $j <52; $j++){
+    
+    for($i = 0; $i < 12; $i++) {
+      $mcs[$j][$i] = $faker->numberBetween($min = 0, $max = 4);
+    }
+
+   
+    for($i = 0; $i < 12; $i++) {
+      $tcs[$j][$i] = $faker->numberBetween($min = 0, $max = 4);
+    }
+
+    
+    for($i = 0; $i < 12; $i++) {
+      $hws[$j][$i] = $faker->numberBetween($min = 0, $max = 4);
+    }
+
+    
+    for($i = 0; $i < 12; $i++) {
+      $bss[$j][$i] = $faker->numberBetween($min = 0, $max = 4);
+    }
+
+    
+    for($i = 0; $i < 12; $i++) {
+      $kss[$j][$i] = $faker->numberBetween($min = 0, $max = 4);
+    }
+
+    
+    for($i = 0; $i < 12; $i++) {
+      $acs[$j][$i] = $faker->numberBetween($min = 0, $max = 4);
+    }
+  }
+    $students = 52;
+
+    $_SESSION["data"] = array($students,$mcs, $tcs, $hws, $bss, $kss, $acs, $dils, $sums);
+
+  }
+
+    
+    
+  return view('index'); } // show index view
 
   public function help() { return view('help'); } // show help view
 
   public function create() { return view('create'); } // show help view
 
-  public function edit() { return view('edit'); } // show help view
+  public function edit($id) { 
+    session_start();
+   
+   
+   $bss = $_SESSION["data"][4][$id] ;
+   $kss = $_SESSION["data"][5][$id] ;
+   $acs = $_SESSION["data"][6][$id] ;
+   $hws = $_SESSION["data"][3][$id] ;
+   $tcs = $_SESSION["data"][2][$id] ;
+   $mcs = $_SESSION["data"][1][$id] ;
+   $dils = $_SESSION["data"][7][$id] ;
+   $sums = $_SESSION["data"][8][$id] ;
+   $total = $_SESSION["data"][0][$id] ;
+    //$foo = 0;
+   for($i = 0;$i < 12; $i++) {
+        $spe[$i] = $mcs[$i]+$tcs[$i];
+      }
+
+    $foo = array($id,$mcs,$tcs,$spe,$hws,$bss,$kss,$acs,$dils,$sums,$id,$id);
+      
+    return view('edit')->with('array', $foo); } // show help view
 
 public function editcheck(Request $request) { 
   	$validator = Validator::make($request->all(), [ // as simple as this
@@ -80,7 +159,7 @@ public function editcheck(Request $request) {
 
     ]);
     if ($validator->fails()) {
-      return redirect('edit') // redisplay the form
+      return redirect('edit/{$id}') // redisplay the form
              ->withErrors($validator) // to see the error messages
              ->withInput(); // the previously entered input remains
     }
@@ -98,6 +177,53 @@ public function editcheck(Request $request) {
              ->withErrors($validator) // to see the error messages
              ->withInput(); // the previously entered input remains
     }
+
+    session_start();
+   
+   
+   $bss = $_SESSION["data"][4][$id] ;
+   $kss = $_SESSION["data"][5][$id] ;
+   $acs = $_SESSION["data"][6][$id] ;
+   $hws = $_SESSION["data"][3][$id] ;
+   $tcs = $_SESSION["data"][2][$id] ;
+   $mcs = $_SESSION["data"][1][$id] ;
+   $dils = $_SESSION["data"][7][$id] ;
+   $sums = $_SESSION["data"][8][$id] ;
+   $total = $_SESSION["data"][0][$id] ;
+
+   for($i = 0; $i < 12; $i++) {
+      $mcs[$total][$i] = 0;
+    }
+
+   
+    for($i = 0; $i < 12; $i++) {
+      $tcs[$total][$i] = 0;
+    }
+
+    
+    for($i = 0; $i < 12; $i++) {
+      $hws[$total][$i] = 0;
+    }
+
+    
+    for($i = 0; $i < 12; $i++) {
+      $bss[$total][$i] = 0;
+    }
+
+    
+    for($i = 0; $i < 12; $i++) {
+      $kss[$total][$i] = 0;
+    }
+
+    
+    for($i = 0; $i < 12; $i++) {
+      $acs[$total][$i] = 0;
+    }
+
+    $_SESSION["data"] = array($total + 1,$mcs, $tcs, $hws, $bss, $kss, $acs, $dils, $sums);
+
+
+
   	return view('index'); } 
 
   // $names = array();
@@ -111,49 +237,34 @@ public function editcheck(Request $request) {
   //   $id[$i] = $faker->unique()->numberBetween($min = 0, $max = 49);
   // }
   public function detail($id) { 
-    $mcs = array();
-    for($i = 0; $i < 52; $i++) {
-      $mcs[$i] = $faker->numberBetween($min = 0, $max = 4);
-    }
+    session_start();
+   
+   
+   $bss = $_SESSION["data"][4][$id] ;
+   $kss = $_SESSION["data"][5][$id] ;
+   $acs = $_SESSION["data"][6][$id] ;
+   $hws = $_SESSION["data"][3][$id] ;
+   $tcs = $_SESSION["data"][2][$id] ;
+   $mcs = $_SESSION["data"][1][$id] ;
+   $total = $_SESSION["data"][0];
 
-    $tcs = array();
-    for($i = 0; $i < 52; $i++) {
-      $tcs[$i] = $faker->numberBetween($min = 0, $max = 4);
-    }
+  //for($i = 0; $i < 12; $i++) {
+        $dils =  $bss[$id] + $kss[$id] + $acs[$id] +  $hws[$id];
+    //  }
 
-    $hws = array();
-    for($i = 0; $i < 52; $i++) {
-      $hws[$i] = $faker->numberBetween($min = 0, $max = 4);
-    }
-
-    $bss = array();
-    for($i = 0; $i < 52; $i++) {
-      $bss[$i] = $faker->numberBetween($min = 0, $max = 4);
-    }
-
-    $kss = array();
-    for($i = 0; $i < 52; $i++) {
-      $kss[$i] = $faker->numberBetween($min = 0, $max = 4);
-    }
-
-    $acs = array();
-    for($i = 0; $i < 52; $i++) {
-      $acs[$i] = $faker->numberBetween($min = 0, $max = 4);
-    }
-
-    $dils = array();
-    for($i = 0; $i < 52; $i++) {
-      $dils[$id] = $hws[$id] + $bss[$id] + $kss[$id] + $acs[$id];
-    }
-
-    $sums = array();
-    for($i = 0;$i < 52; $i++) {
-      $sums[$id] = $mcs[$id] + $tcs[$id] + $dils[$id];
-    }
-
-  	$foo = array($id,$mcs[$id],$tcs[$id],($mcs[$id]+$tcs[$id]),$hws[$id],$bss[$id],$kss[$id],$acs[$id],$dils[$id],$sums[$id],$id,$id);
-  	$boo = array($id,$id,$id,$id,$id,$id,$id,$id,$id,$id,$id);
-  	return view('detail')->with('array',$array=array( $id, $foo,$boo)); }
+     
+      //for($i = 0;$i < 12; $i++) {
+        $sums = $mcs[$id] + $tcs[$id] + $dils[$id];
+      //}
+      //for($i = 0;$i < 12; $i++) {
+        $spe = $mcs[$id]+$tcs[$id];
+      //}
+    	$foo = array($id,$mcs,$tcs,$spe,$hws,$bss,$kss,$acs,$dils,$sums,$id,$id);
+       
+        $_SESSION["data"][7] = $dils;
+         $_SESSION["data"][8] = $sums;
+    	
+  	return view('detail')->with('array', $foo); }
 
   public function about() { return 'hello'; }
 }
